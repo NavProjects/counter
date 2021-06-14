@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Assignment Counter</title>
+</head>
+<body style="background-color:black; color: white;" >
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 30%;">
+            <p>Times visited: {{ session['visits']}}</p>
+            <p>Counter: {{ session['count'] }}</p>
+            <a class="btn btn-secondary"href="/">Count</a>
+            <a style = 'margin-top: 2%;' class="btn btn-secondary" href="/add">ADD 2</a>
+            <a style="margin-top: 2%;" class="btn btn-danger" href='/destroy_session'>Reset</a>
+            <form style="display: flex; margin-top: 2%;" action="/own" method='post'>
+                <input style="border-radius: 0%;" name="increment" value="0" class="" type="number" min="0" max="20">
+                <input style="border-radius: 0%;" class="btn btn-secondary" type="submit" value="ADD TOP AMOUNT">
+            </form>
+            </div>
+</body>
+</html>
